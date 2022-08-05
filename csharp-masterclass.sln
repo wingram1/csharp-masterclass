@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharp-notes", "Net5App\csharp-notes.csproj", "{ED9065DF-466A-46F2-877D-04C6AFFB431D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED9065DF-466A-46F2-877D-04C6AFFB431D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9065DF-466A-46F2-877D-04C6AFFB431D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9065DF-466A-46F2-877D-04C6AFFB431D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9065DF-466A-46F2-877D-04C6AFFB431D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D20EBA78-DD43-4E1C-A816-6DD910F03587}
+	EndGlobalSection
+EndGlobal

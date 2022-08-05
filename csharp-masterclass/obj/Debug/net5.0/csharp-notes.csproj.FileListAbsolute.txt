@@ -1,0 +1,16 @@
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.csproj.AssemblyReference.cache
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.AssemblyInfoInputs.cache
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.AssemblyInfo.cs
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.csproj.CoreCompileInputs.cache
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.exe
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.deps.json
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.runtimeconfig.json
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.runtimeconfig.dev.json
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.dll
+C:\Users\ingra\source\repos\Net5App\Net5App\bin\Debug\net5.0\csharp-notes.pdb
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.dll
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\refint\csharp-notes.dll
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.pdb
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\csharp-notes.genruntimeconfig.cache
+C:\Users\ingra\source\repos\Net5App\Net5App\obj\Debug\net5.0\ref\csharp-notes.dll
