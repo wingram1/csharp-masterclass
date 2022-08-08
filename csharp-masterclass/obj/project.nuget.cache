@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NHPTbdfKteJnU8jzdHLs1pT3MGxe/LhWq0fSbmu3xKyx7sjQe/VPK1N0nuMSUV+1hvAgQ22qOrHtJWjl3nZaaA==",
+  "dgSpecHash": "mAyyQMIAUVmtly+3lVBfMDUFVG2KhwEcdSryowxn14W+EwiRdIt78xySyalGXVncpHYfGl0P/8YPlRGcbiXiYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ingra\\source\\repos\\Net5App\\Net5App\\csharp-notes.csproj",
+  "projectFilePath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\csharp-masterclass.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

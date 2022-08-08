@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ingra\\source\\repos\\Net5App\\Net5App\\csharp-notes.csproj",
-      "projectName": "csharp-notes",
-      "projectPath": "C:\\Users\\ingra\\source\\repos\\Net5App\\Net5App\\csharp-notes.csproj",
+      "projectUniqueName": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\csharp-masterclass.csproj",
+      "projectName": "csharp-masterclass",
+      "projectPath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\csharp-masterclass.csproj",
       "packagesPath": "C:\\Users\\ingra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ingra\\source\\repos\\Net5App\\Net5App\\obj\\",
+      "outputPath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ingra\\AppData\\Roaming\\NuGet\\NuGet.Config",

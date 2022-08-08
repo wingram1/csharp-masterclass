@@ -1,0 +1,16 @@
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.csproj.AssemblyReference.cache
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.AssemblyInfoInputs.cache
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.AssemblyInfo.cs
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.csproj.CoreCompileInputs.cache
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.exe
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.deps.json
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.runtimeconfig.json
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.runtimeconfig.dev.json
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.dll
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\bin\Debug\net5.0\csharp-masterclass.pdb
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.dll
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\refint\csharp-masterclass.dll
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.pdb
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\csharp-masterclass.genruntimeconfig.cache
+C:\Users\ingra\source\repos\csharp-masterclass\csharp-masterclass\obj\Debug\net5.0\ref\csharp-masterclass.dll

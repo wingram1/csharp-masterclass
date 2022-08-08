@@ -2,10 +2,17 @@
 
 namespace cSharpNotes
 {
-    internal class dataTypesAndVariables
+    internal class cSharpMasterclass
     {
         // Entry point of our program
         static void Main(string[] args)
+        {
+            s02_DataTypesVariables();
+            s03_FunctionsMethods();
+        }
+
+        // access modifier => (static) => return type => method => name (parameter 1, parameter 2)
+        public static void s02_DataTypesVariables()
         {
             string stringForFloat = "0.85"; // datatype should be float
 
@@ -48,7 +55,7 @@ namespace cSharpNotes
             Console.WriteLine(fullName);
 
             ///////// DATATYPES AND VARIABLES CHALLENGE ///////////
-            
+
             byte myByte = 255;
             sbyte mySByte = 127;
             int myInt = 2147483647;
@@ -63,7 +70,7 @@ namespace cSharpNotes
             bool myBool = true;
             string myString = "abcdefg";
             decimal myDecimal = 12345.6789m;
-            
+
             Console.WriteLine(myByte.ToString(), mySByte, myInt, myUInt, myShort, myUShort, myLong, myULong, myFloat, myDouble, myChar, myBool, myString, myDecimal);
 
 
@@ -79,6 +86,209 @@ namespace cSharpNotes
 
             // produces error
             /* birthday = "07.01.96"; */
+        }
+        public static void s03_FunctionsMethods()
+        {
+            WriteSomething();
+
+            string message = "Hello method!";
+            WriteSomethingSpecific(message);
+
+            Console.WriteLine($"Addition result: {Add(50, 25)}");
+
+            Console.WriteLine($"Multiplication result: {Multiply(40, 12)}");
+
+            Console.WriteLine($"Division result: {Divide(104, 13)}");
+
+            //////// Friends Challenge ////////
+            string friend1 = "Ming";
+            string friend2 = "Seth";
+            string friend3 = "Jamie";
+
+            Console.WriteLine(GreetFriend(friend1, friend2, friend3));
+
+
+            //////// Coding Exercise 1 /////////
+            string inputString = "Yabba dabba doo! ";
+            Console.WriteLine(ToLowerAndUpper(inputString));
+            CharCount(inputString);
+
+
+
+
+            ///////// User Input //////////
+            Console.WriteLine("Write something: ");
+            string userInput = Console.ReadLine();
+            Console.WriteLine($"You wrote: {userInput}");
+
+            Console.WriteLine($"Your result is: {Calculate()}");
+
+            Operators();
+
+            // access modifier => (static) => return type => method name (parameter 1, parameter 2)
+            static void WriteSomething()
+            {
+                Console.WriteLine("I am called from a method");
+
+            }
+
+            static void WriteSomethingSpecific(string myText)
+            {
+                Console.WriteLine($"Your text: {myText}");
+            }
+
+            static int Add(int param1, int param2)
+            {
+                Console.WriteLine($"\nPerforming operation {param1} + {param2}...");
+
+                int result = param1 + param2;
+
+                return result;
+            }
+
+            static int Multiply(int param1, int param2)
+            {
+                Console.WriteLine($"\nPerforming operation {param1} * {param2}...");
+
+                int result = param1 * param2;
+
+                return result;
+            }
+
+            // need to perform necessary type conversion on params
+            static double Divide(double param1, double param2)
+            {
+                Console.WriteLine($"\nPerforming operation {param1} / {param2}...");
+
+                double result = param1 / param2;
+
+                return result;
+            }
+
+            static string GreetFriend(string myFriend1, string myFriend2, string myFriend3)
+            {
+                return $"Hello {myFriend1}, {myFriend2}, and {myFriend3}: my friends!";
+            }
+
+            static string ToLowerAndUpper(string input)
+            {
+                string lower = input.ToLower();
+                string upper = input.ToUpper();
+
+                return String.Join("", lower, upper);
+            }
+
+            static void CharCount(string input)
+            {
+                Console.WriteLine($"The amount of characters is {input.Length}.");
+            }
+
+            static string Calculate()
+            {
+
+                try
+                {
+                    Console.WriteLine("Enter first number to be divided: ");
+                    int num1 = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Enter second number to be divided: ");
+                    int num2 = Int32.Parse(Console.ReadLine());
+
+                    return ($"Your calculation result is: {(num1 / num2).ToString()}");
+                }
+                // wrong type error
+                catch (FormatException)
+                {
+                    return ("Format exception, please enter correct type next time");
+                }
+                // too large for type error
+                catch (OverflowException)
+                {
+                    return ("Overflow exception, number was too long or too short for Int32");
+                }
+                // catch null value error
+                catch (ArgumentNullException)
+                {
+                    return ("ArgumentNullException, the value was empty (null)");
+                }
+                catch (DivideByZeroException)
+                {
+                    return ("DivideByZeroException - you can't divide by zero, dummy.");
+                }
+                // catch-all error
+                catch (Exception)
+                {
+                    return ("General Exception");
+                }
+                // always called at the end of try/catch
+                finally
+                {
+                    Console.WriteLine("Have a nice day!");
+                }
+
+
+
+            }
+
+            static void Operators()
+            {
+                int num1 = 5;
+                int num2 = 3;
+                int num3;
+
+                // unary operators
+                num3 = -num1;
+                Console.WriteLine("num3 is {0}", num3);
+
+                bool isOvercast = true;
+                Console.WriteLine("Is it sunny? {0}", !isOvercast);
+
+
+                // increment operators
+                int num = 0;
+                num++;
+
+                // pre increment
+                Console.WriteLine("increment: num++ = {0}\n happens after WriteLine", num++);
+                Console.WriteLine("pre increment: ++num = {0}\n happens before WriteLine", ++num);
+
+                // decrement / predecrement
+                Console.WriteLine("decrement: num-- = {0}", num--);
+                Console.WriteLine("pre decrement: --num = {0}", --num);
+
+                // mathematical operators
+                Console.WriteLine($"result of {num1} + {num2} is {num1 + num2}");
+                Console.WriteLine($"result of {num1} - {num2} is {num1 - num2}");
+                Console.WriteLine($"result of {num1} * {num2} is {num1 * num2}");
+                Console.WriteLine($"result of {num1} / {num2} is {num1 / num2}");
+                Console.WriteLine($"//////modular operator//////\nresult of {num1} % {num2} is {num1 % num2}; returns remainder of division");
+
+                // relational and type operators
+                bool isGreater;
+                isGreater = 2 > 1;
+                Console.WriteLine($"2 > 1 returns {isGreater}");
+
+                bool isEqual;
+                isEqual = 1 == 1;
+                Console.WriteLine($"1 == 1 returns {isEqual}");
+
+                bool isInequal;
+                isInequal = 1 != 2;
+                Console.WriteLine($"1 != 2 returns {isInequal}");
+
+                bool isLesser;
+                isLesser = 1 < 2;
+                Console.WriteLine($"1 < 2 returns {isLesser}");
+
+                // conditional (aka logical) operators
+                bool isLesserAndSunny;
+                isLesserAndSunny = isLesser && !isOvercast;
+                Console.WriteLine($"isLesser && !isOvercast returns {isLesserAndSunny} - needs both conditions to be true");
+
+                bool isGreaterOrOvercast;
+                isGreaterOrOvercast = isGreater || !isOvercast;
+                Console.WriteLine($"isLesser || !isOvercast returns {isGreaterOrOvercast} - only needs one to be true");
+            }
         }
     }
 }
