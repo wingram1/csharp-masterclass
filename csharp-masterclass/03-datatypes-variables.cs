@@ -7,8 +7,13 @@ namespace cSharpNotes
         // Entry point of our program
         static void Main(string[] args)
         {
+            /*  
             s02_DataTypesVariables();
             s03_FunctionsMethods();
+
+            */
+
+            s04_MakingDecisions();
         }
 
         // access modifier => (static) => return type => method => name (parameter 1, parameter 2)
@@ -289,6 +294,52 @@ namespace cSharpNotes
                 isGreaterOrOvercast = isGreater || !isOvercast;
                 Console.WriteLine($"isLesser || !isOvercast returns {isGreaterOrOvercast} - only needs one to be true");
             }
+        }
+
+        public static void s04_MakingDecisions()
+        {
+            /////////////   IF/ELSE STATEMENTS //////////////
+            if(1 == 2)
+            {
+                Console.WriteLine("1==2");
+            }
+            else if (2 == 2)
+            {
+                Console.WriteLine("1==2 not true, so 2==2");
+            }
+            else
+            {
+                Console.WriteLine("No correct statements");
+            }
+
+
+            ///////////// temp exercise /////////////
+            Console.WriteLine("What is the temperature?");
+            string tempString = Console.ReadLine();
+            int temp;
+            try
+            {
+                temp = int.Parse(tempString);
+
+                if (temp < 60)
+                {
+                    Console.WriteLine("Take a coat");
+                }
+                else if (temp > 80)
+                {
+                    Console.WriteLine("Wear shorts");
+                }
+                else
+                {
+                    Console.WriteLine("Wear whatever's comfortable");
+                }
+            }
+            catch
+            {
+                Console.WriteLine("error");
+            }
+
+
         }
     }
 }
