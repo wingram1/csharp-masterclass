@@ -317,6 +317,8 @@ namespace cSharpNotes
             Console.WriteLine("What is the temperature?");
             string tempString = Console.ReadLine();
             int temp;
+
+            // can do this (try/catch method)
             try
             {
                 temp = int.Parse(tempString);
@@ -327,17 +329,59 @@ namespace cSharpNotes
                 }
                 else if (temp > 80)
                 {
-                    Console.WriteLine("Wear shorts");
+                    Console.WriteLine("Wear shorts and a t-shirt");
                 }
                 else
                 {
-                    Console.WriteLine("Wear whatever's comfortable");
+                    Console.WriteLine("Wear whatever's comfortable. You can't go wrong!");
                 }
             }
             catch
             {
-                Console.WriteLine("error");
+                Console.WriteLine("Error! Input not of type int. Temp set to 0.");
+                temp = 0;
             }
+
+            // can also do this (TryParse) - returns boolean result
+            string numberAsString = "42";
+            int parsedValue;
+
+            if (int.TryParse(numberAsString, out parsedValue))
+            {
+                Console.WriteLine($"Parsing successful - number is {parsedValue}");
+            }
+            else
+            {
+                Console.WriteLine("Parsing failed.");
+            }
+
+            /////////////Coding Challenge - Odd or Even/////////////
+            
+            static void CheckIfOddOrEven(int number)
+            {
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("Even");
+                }
+                else
+                {
+                    Console.WriteLine("Odd");
+                }
+            }
+
+            int myOdd1 = 9;
+            int myOdd2 = 83;
+            int myEven1 = 120;
+            int myEven2 = 2;
+
+            // should print odd/odd/even/even
+            CheckIfOddOrEven(myOdd1);
+            CheckIfOddOrEven(myOdd2);
+            CheckIfOddOrEven(myEven1);
+            CheckIfOddOrEven(myEven2);
+
+
+
 
 
         }
