@@ -10,10 +10,11 @@ namespace cSharpNotes
             /*  
             s02_DataTypesVariables();
             s03_FunctionsMethods();
-
+            s04_MakingDecisions();
+            s05_Loops();
             */
 
-            s04_MakingDecisions();
+            s06_OOP();
         }
 
         // access modifier => (static) => return type => method => name (parameter 1, parameter 2)
@@ -497,10 +498,10 @@ namespace cSharpNotes
         public static void s05_Loops()
         {
             // for
-            for(int counter = 0; counter < 10; counter++)
-            {
-                Console.WriteLine(counter);
-            }
+            //for(int counter = 0; counter < 10; counter++)
+            //{
+              //  Console.WriteLine(counter);
+            //}
 
             // while
             int counter = 0;
@@ -514,11 +515,58 @@ namespace cSharpNotes
             do
             {
                 Console.WriteLine(counter);
-
+                counter--;
             } while (counter > 0);
 
+
+            /////// Challenge - Loops 1 - Average ///////
+
+            void getScoreAverage()
+            {
+                bool done = false;
+                int sum = 0;
+                int num = 0;
+
+                while (done == false)
+                {
+                    Console.WriteLine("Enter a score: ");
+                    int score = -1;
+
+                    try { 
+                        score = Int32.Parse(Console.ReadLine()); 
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Input not of type Int32.");
+                        continue;
+                    }
+
+                    if (score < 0 || score > 20)
+                    {
+                        Console.WriteLine("You must enter a number between 0 and 20!");
+                    }
+                    else
+                    {
+                        sum += score;
+                        num++;
+
+                        Console.WriteLine($"Current average: {sum / num}");
+                        Console.WriteLine("Are you done? y/n");
+                        done = Console.ReadKey().Key == ConsoleKey.Y ? true : false;
+                    }
+                }
+
+                Console.WriteLine($"Final average: {sum/num}");
+
+            }
+
+            getScoreAverage();
             
-            // for each
+        }
+
+        public static void s06_OOP()
+        {
+
         }
     }
 }
