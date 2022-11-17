@@ -371,7 +371,7 @@ namespace cSharpNotes
 
             int myOdd1 = 9;
             int myOdd2 = 83;
-            int myEven1 = 120;
+            int myEven1 = 70;
             int myEven2 = 2;
 
             // should print odd/odd/even/even
@@ -380,10 +380,145 @@ namespace cSharpNotes
             CheckIfOddOrEven(myEven1);
             CheckIfOddOrEven(myEven2);
 
+            ////////////////////////////////////////////////////////
+            
+            static void NestedCheck(int number)
+            {
+                if (number % 3 == 0)
+                {
+                    Console.WriteLine("Divisible by 3.");
+                }
+                else if (number % 7 == 0)
+                {
+                    Console.WriteLine("Divisible by 7.");
+                }
+                else
+                {
+                    if (number % 2 != 0)
+                    {
+                        Console.WriteLine("Odd number.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Even number.");
+                    }
+                }
+            }
+
+            NestedCheck(myOdd1);
+            NestedCheck(myOdd2);
+            NestedCheck(myEven1);
+            NestedCheck(myEven2);
+
+            ////////////// Challenge - If Statements ////////////////
+            string username;
+            string password;
+
+            void Register()
+            {
+                Console.WriteLine("===========REGISTRATION===========\nEnter your username:");
+                username = Console.ReadLine();
+                Console.WriteLine("Enter your password:");
+                password = Console.ReadLine();
+
+            }
+
+            void Login()
+            {
+                Console.WriteLine("Login:\nEnter your username:");
+                string usernameInput = Console.ReadLine();
+                Console.WriteLine("Enter your password:");
+                string passwordInput = Console.ReadLine();
+
+                if (username != usernameInput || password != passwordInput)
+                {
+                    Console.WriteLine("Invalid credentials. Restart program.");
+                }
+                else
+                {
+                    Console.WriteLine($"Welcome {username}");
+                }
+            }
+
+            // Register();
+            // Login();
+
+            int highscore = 0;
+            string highscorePlayer = "";
+
+            void highscoreCheck(int newScore, string playerName)
+            {
+                if (newScore > highscore)
+                {
+                    highscore = newScore;
+                    highscorePlayer = playerName;
+                    Console.WriteLine("New highscore is " + highscore + ", set by " + highscorePlayer + ".");
+                }   
+                else
+                {
+                    Console.WriteLine("The old highscore of " + highscore + " could not be broken and is still held by " + highscorePlayer + ".");
+                }
+            }
+
+            highscoreCheck(15, "Bobby");
+            highscoreCheck(14, "Susie");
+            highscoreCheck(5000, "h4ck3r");
+
+            //////////// TERNARY OPERATORS //////////////
+
+            int temperature = -5;
+            string stateOfMatter;
+
+            stateOfMatter = temperature <= 0 ? "solid" : "liquid";
+            Console.WriteLine($"temp is {stateOfMatter}");
+
+            temperature = 105;
+            stateOfMatter = temperature <= 0 ? "solid" : temperature >= 100 ? "gas" : "liquid";
+            Console.WriteLine($"temp is {stateOfMatter}");
 
 
+            // challenge
+            static void tempCheck(int temp)
+            {
+                string message = temp <= 15 ? 
+                    "it is too cold here" : 
+                    temp > 28 ? 
+                        "it is hot here" : 
+                        "it is ok";
 
+                Console.WriteLine(message);
+            }
 
+            tempCheck(10);
+            tempCheck(123);
+            tempCheck(20);
+        }
+
+        public static void s05_Loops()
+        {
+            // for
+            for(int counter = 0; counter < 10; counter++)
+            {
+                Console.WriteLine(counter);
+            }
+
+            // while
+            int counter = 0;
+            while(counter < 10)
+            {
+                counter++;
+                Console.WriteLine(counter);
+            };
+
+            // do while
+            do
+            {
+                Console.WriteLine(counter);
+
+            } while (counter > 0);
+
+            
+            // for each
         }
     }
 }
