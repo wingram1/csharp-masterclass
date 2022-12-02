@@ -581,6 +581,24 @@ namespace cSharpMasterclass
             joe.Introduce();
             simon.Introduce();
             immortal.Introduce();
+
+            // default dimensions set to 0
+            // length/width/height are private so can't change from here
+            Box box = new Box();
+            box.DisplayInfo();
+
+            // use custom setter method to change private properties
+            box.Length = 3;
+            box.Height = -4;
+            box.Width = 5;
+
+            box.DisplayInfo();
+
+            Console.WriteLine($"Volume is {box.Volume}, front surface is {box.FrontSurface}");
+
+            Members lucy = new Members();
+            lucy.Introducing(true);
+            lucy.Introducing(false);
         }
     }
 }
