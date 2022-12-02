@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace cSharpNotes
+namespace cSharpMasterclass
 {
-    internal class cSharpMasterclass
+    internal class cSharpNotes
     {
         // Entry point of our program
         static void Main(string[] args)
@@ -566,7 +566,19 @@ namespace cSharpNotes
 
         public static void s06_OOP()
         {
+            Human william = new Human();
 
-        }
+            william.firstName = "William";
+            william.lastName = "Ingram";
+
+            william.Introduce();
+
+            Human sissy = new Human();
+
+            sissy.firstName = "Sissy";
+            sissy.lastName = "Wagner";
+
+            sissy.Introduce();
+            william.Introduce();        }
     }
 }

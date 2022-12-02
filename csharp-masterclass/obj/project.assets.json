@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\csharp-masterclass.csproj",
-      "projectName": "csharp-masterclass",
-      "projectPath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\csharp-masterclass.csproj",
+      "projectUniqueName": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\cSharpMasterclass.csproj",
+      "projectName": "cSharpMasterclass",
+      "projectPath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\cSharpMasterclass.csproj",
       "packagesPath": "C:\\Users\\ingra\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ingra\\source\\repos\\csharp-masterclass\\csharp-masterclass\\obj\\",
       "projectStyle": "PackageReference",
