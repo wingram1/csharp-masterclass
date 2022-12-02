@@ -566,19 +566,21 @@ namespace cSharpMasterclass
 
         public static void s06_OOP()
         {
-            Human william = new Human();
-
-            william.firstName = "William";
-            william.lastName = "Ingram";
-
-            william.Introduce();
-
-            Human sissy = new Human();
-
-            sissy.firstName = "Sissy";
-            sissy.lastName = "Wagner";
+            Human bob = new Human("Bob");
+            Human joe = new Human("Joe", 45);
+            Human simon = new Human("Simon", 45, "red");
+            Human immortal = new Human("Immortal,", "The", "all-seeing");
+            Human william = new Human("William", "Ingram", 26, "brown");
+            Human sissy = new Human("Sissy", "Wagner", 1, "Blue");
+            Human basicHuman = new Human();
 
             sissy.Introduce();
-            william.Introduce();        }
+            william.Introduce();
+            basicHuman.Introduce();
+            bob.Introduce();
+            joe.Introduce();
+            simon.Introduce();
+            immortal.Introduce();
+        }
     }
 }
