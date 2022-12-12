@@ -12,9 +12,10 @@ namespace cSharpMasterclass
             s03_FunctionsMethods();
             s04_MakingDecisions();
             s05_Loops();
+            s06_OOP();
             */
 
-            s06_OOP();
+            s07_Arrays();
         }
 
         // access modifier => (static) => return type => method => name (parameter 1, parameter 2)
@@ -599,6 +600,306 @@ namespace cSharpMasterclass
             Members lucy = new Members();
             lucy.Introducing(true);
             lucy.Introducing(false);
+        }
+
+        public static void s07_Arrays()
+        {
+            int[] grades = new int[5];
+
+            grades[0] = 20;
+            grades[1] = 15;
+            grades[2] = 12;
+            grades[3] = 9;
+            grades[4] = 7;
+
+            Console.WriteLine($"grades at index 0 : {grades[0]}");
+
+            // assign value
+            grades[0] = 10;
+
+            Console.WriteLine($"Changed grade at index 0: {grades[0]}");
+
+            // way #2 of initializing
+            int[] gradesOfMathStudentsA = { 20, 13, 12, 8, 8 };
+
+            // way #3 of initializing
+            int[] gradesOfMathStudentsB = new int[] { 15, 20, 3, 17, 18, 15 };
+
+            Console.WriteLine($"Length of gradesOfMathStudentsA: {gradesOfMathStudentsA.Length}");
+            Console.WriteLine($"Length of gradesOfMathStudentsB: {gradesOfMathStudentsB.Length}");
+
+
+            int[] nums = new int[10];
+
+            Console.WriteLine(nums);
+
+            for(int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = i;
+            }
+
+            for(int j = 0; j < nums.Length; j++)
+            {
+                Console.WriteLine($"Element {j}: {nums[j]}");
+            }
+
+            // can also use forEach loop
+            int counter = 0;
+            foreach(int k in nums)
+            {
+               Console.WriteLine($"{counter}: {k}");
+               counter++;
+            }
+
+            string[] friends = {"Ming", "Seth", "Andrew", "Sunil", "Nick"};
+
+            foreach (string l in friends)
+            {
+                Console.WriteLine($"Hello, {l}!");
+            }
+
+            static void GetOdd(int[] Array)
+            {
+                foreach(int i in Array)
+                {
+                    if (i % 2 != 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+
+            static void GetEven(int[] Array)
+            {
+                foreach (int i in Array)
+                {
+                    if (i % 2 == 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+
+            static void Run()
+            {
+                int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+                GetOdd(array);
+                GetEven(array);
+            }
+
+            Run();
+
+            static void InputTypeCheck()
+            {
+                string input = Console.ReadLine();
+
+                Console.WriteLine($"You entered: {input}");
+
+                if (Int32.TryParse(input, out int j))
+                {
+                    Console.WriteLine("It is of type int");
+                }
+                else
+                {
+                    switch(input)
+                    {
+                        case "true":
+                            Console.WriteLine("It is of type bool");
+                            break;
+                        case "false":
+                            Console.WriteLine($"It is of type bool");
+                            break;
+                        default:
+                            Console.WriteLine($"It is of type int");
+                            break;
+                    }
+                }
+            }
+
+            //InputTypeCheck();
+
+
+            // 2D Array
+            string[,] matrix;
+
+            // 3D array
+            int[,,] threeD;
+
+            int[,] array2D = new int[,] 
+            {
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+            };
+
+            // target center value, have to put both indices
+            Console.WriteLine($"Central value is {array2D[1,1]}");
+            Console.WriteLine($"Bottom-left value is {array2D[2,0]}");
+
+            int[,,] array3D = new int[,,]
+            {
+                {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                },
+                {
+                    {6, 7, 8},
+                    {8, 9, 10},
+                    {11, 12, 13}
+                },
+                {
+                    {14, 15, 16},
+                    {17, 18, 19},
+                    {20, 21, 22},
+                }
+            };
+
+            // specify 2D array length
+            string[,] array2DString = new string[3, 2]
+            {
+                {"one", "two"},
+                {"three", "four"},
+                {"five", "six"}
+            };
+
+            // change "four" to "chicken
+            array2DString[1, 1] = "chicken";
+
+            // get dimensions of array (1, 2, 3);
+            int dimensions = array2DString.Rank;
+            Console.WriteLine(dimensions);
+
+
+
+
+
+            ////////////////// tic tac toe challenge //////////////////
+            
+            string[,] board = new string[3, 3]
+            {
+                { " ", " ", " "},
+                { " ", " ", " "},
+                { " ", " ", " "},
+            };
+
+            static void WriteBoard(string[,] Board)
+            {
+                for(int i = 0; i < 3; i++)
+                {
+                    Console.WriteLine($" {Board[i, 0]} | {Board[i, 1]} | {Board[i, 2]} ");
+                    if (i < 2)
+                    {
+                        Console.WriteLine("-----------");
+                    }
+                }
+            }
+
+            static bool CheckIfComplete(string[,] Board)
+            {
+                // left to right diag
+                if (Board[0,0] == Board[1,1] && Board[0,0] == Board[2,2] && Board[0, 0] != " ")
+                {
+                    return true;
+                }
+                // right to left diag
+                if (Board[0,2] == Board[1,1] && Board[0,2] == Board[2,0] && Board[0,2] != " ")
+                {
+                    return true;
+                }
+         
+                for (int i = 0; i < 3; i++)
+                {
+                    // check cols
+                    if (Board[0,i] == Board[1,i] && Board[0,i] == Board[2,i] && Board[0,i] != " ")
+                    {
+                        return true;
+                    }
+                    // check rows
+                    if (Board[i,0] == Board[i,1] && Board[i,0] == Board[i, 2] && Board[i,0] != " ")
+                    {
+                        return true;
+                    }
+                    
+                }
+
+                return false;
+            }
+
+            // show empty board
+            WriteBoard(board);
+
+            bool player1Currently = true;
+
+            // play game
+            while (CheckIfComplete(board) == false) {
+                int player = player1Currently ? 1 : 2;
+
+                Console.WriteLine($"Player {player}: Enter Row 1, 2, or 3");
+                char input1 = Console.ReadLine()[0];
+
+                Console.WriteLine($"Player {player}: Enter Column 1, 2, or 3");
+                char input2 = Console.ReadLine()[0];
+
+                int row = -1;
+                int col = -1;
+
+                // error handling
+                switch (input1)
+                {
+                    case '1':
+                        row = 0;
+                        break;
+                    case '2':
+                        row = 1;
+                        break;
+                    case '3':
+                        row = 2;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (input2)
+                {
+                    case '1':
+                        col = 0;
+                        break;
+                    case '2':
+                        col = 1;
+                        break;
+                    case '3':
+                        col = 2;
+                        break;
+                    default:
+                        break;
+                }
+
+                if (row > -1 && col > -1)
+                {
+                    if (board[row,col] == " ")
+                    {
+                        board[row,col] = player1Currently ? "X" : "O";
+
+                        // switch players
+                        player1Currently = !player1Currently;
+
+                        // write board to console
+                        WriteBoard(board);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error! There is already a mark here!");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error! Must input 1, 2, or 3");
+                }
+            }
+
+            Console.WriteLine("Game complete!");
         }
     }
 }
