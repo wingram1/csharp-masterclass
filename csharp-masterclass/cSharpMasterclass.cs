@@ -15,9 +15,11 @@ namespace cSharpMasterclass
             s06_OOP();
             */
 
+            
             s07_Arrays();
+            //TicTacToe.Play();
         }
-
+        
         // access modifier => (static) => return type => method => name (parameter 1, parameter 2)
         public static void s02_DataTypesVariables()
         {
@@ -633,25 +635,25 @@ namespace cSharpMasterclass
 
             Console.WriteLine(nums);
 
-            for(int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 nums[i] = i;
             }
 
-            for(int j = 0; j < nums.Length; j++)
+            for (int j = 0; j < nums.Length; j++)
             {
                 Console.WriteLine($"Element {j}: {nums[j]}");
             }
 
             // can also use forEach loop
             int counter = 0;
-            foreach(int k in nums)
+            foreach (int k in nums)
             {
-               Console.WriteLine($"{counter}: {k}");
-               counter++;
+                Console.WriteLine($"{counter}: {k}");
+                counter++;
             }
 
-            string[] friends = {"Ming", "Seth", "Andrew", "Sunil", "Nick"};
+            string[] friends = { "Ming", "Seth", "Andrew", "Sunil", "Nick" };
 
             foreach (string l in friends)
             {
@@ -660,7 +662,7 @@ namespace cSharpMasterclass
 
             static void GetOdd(int[] Array)
             {
-                foreach(int i in Array)
+                foreach (int i in Array)
                 {
                     if (i % 2 != 0)
                     {
@@ -702,7 +704,7 @@ namespace cSharpMasterclass
                 }
                 else
                 {
-                    switch(input)
+                    switch (input)
                     {
                         case "true":
                             Console.WriteLine("It is of type bool");
@@ -726,7 +728,7 @@ namespace cSharpMasterclass
             // 3D array
             int[,,] threeD;
 
-            int[,] array2D = new int[,] 
+            int[,] array2D = new int[,]
             {
                 { 1, 2, 3 },
                 { 4, 5, 6 },
@@ -734,8 +736,8 @@ namespace cSharpMasterclass
             };
 
             // target center value, have to put both indices
-            Console.WriteLine($"Central value is {array2D[1,1]}");
-            Console.WriteLine($"Bottom-left value is {array2D[2,0]}");
+            Console.WriteLine($"Central value is {array2D[1, 1]}");
+            Console.WriteLine($"Bottom-left value is {array2D[2, 0]}");
 
             int[,,] array3D = new int[,,]
             {
@@ -772,134 +774,39 @@ namespace cSharpMasterclass
             Console.WriteLine(dimensions);
 
 
+            /////// Jagged Arrays ////////
+            Console.WriteLine("========Jagged Arrays========");
+            // declare
+            int[][] jaggedArr = new int[6][];
 
+            jaggedArr[0] = new int[5];
+            jaggedArr[1] = new int[3];
+            jaggedArr[2] = new int[2];
 
+            jaggedArr[3] = new int[] { 2, 3, 5, 7, 11 };
+            jaggedArr[4] = new int[] { 4, 5, 6, 8};
+            jaggedArr[5] = new int[] { 7, 8 };
 
-            ////////////////// tic tac toe challenge //////////////////
-            
-            string[,] board = new string[3, 3]
+            // alternative way:
+            int[][] jaggedArr2 = new int[][]
             {
-                { " ", " ", " "},
-                { " ", " ", " "},
-                { " ", " ", " "},
+                new int[] { 1, 2, 3, 4, 5, 6, },
+                new int[] { 7, 8, 9 }
             };
 
-            static void WriteBoard(string[,] Board)
+            for (int i = 0; i < jaggedArr2.Length; i++)
             {
-                for(int i = 0; i < 3; i++)
+                string arr = "";
+
+                for (int j = 0; j < jaggedArr2[i].Length; j++)
                 {
-                    Console.WriteLine($" {Board[i, 0]} | {Board[i, 1]} | {Board[i, 2]} ");
-                    if (i < 2)
-                    {
-                        Console.WriteLine("-----------");
-                    }
+                    arr += $" {jaggedArr2[i][j]},";
                 }
+
+                arr = $"[{arr} ]";
+
+                Console.WriteLine(arr);
             }
-
-            static bool CheckIfComplete(string[,] Board)
-            {
-                // left to right diag
-                if (Board[0,0] == Board[1,1] && Board[0,0] == Board[2,2] && Board[0, 0] != " ")
-                {
-                    return true;
-                }
-                // right to left diag
-                if (Board[0,2] == Board[1,1] && Board[0,2] == Board[2,0] && Board[0,2] != " ")
-                {
-                    return true;
-                }
-         
-                for (int i = 0; i < 3; i++)
-                {
-                    // check cols
-                    if (Board[0,i] == Board[1,i] && Board[0,i] == Board[2,i] && Board[0,i] != " ")
-                    {
-                        return true;
-                    }
-                    // check rows
-                    if (Board[i,0] == Board[i,1] && Board[i,0] == Board[i, 2] && Board[i,0] != " ")
-                    {
-                        return true;
-                    }
-                    
-                }
-
-                return false;
-            }
-
-            // show empty board
-            WriteBoard(board);
-
-            bool player1Currently = true;
-
-            // play game
-            while (CheckIfComplete(board) == false) {
-                int player = player1Currently ? 1 : 2;
-
-                Console.WriteLine($"Player {player}: Enter Row 1, 2, or 3");
-                char input1 = Console.ReadLine()[0];
-
-                Console.WriteLine($"Player {player}: Enter Column 1, 2, or 3");
-                char input2 = Console.ReadLine()[0];
-
-                int row = -1;
-                int col = -1;
-
-                // error handling
-                switch (input1)
-                {
-                    case '1':
-                        row = 0;
-                        break;
-                    case '2':
-                        row = 1;
-                        break;
-                    case '3':
-                        row = 2;
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (input2)
-                {
-                    case '1':
-                        col = 0;
-                        break;
-                    case '2':
-                        col = 1;
-                        break;
-                    case '3':
-                        col = 2;
-                        break;
-                    default:
-                        break;
-                }
-
-                if (row > -1 && col > -1)
-                {
-                    if (board[row,col] == " ")
-                    {
-                        board[row,col] = player1Currently ? "X" : "O";
-
-                        // switch players
-                        player1Currently = !player1Currently;
-
-                        // write board to console
-                        WriteBoard(board);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error! There is already a mark here!");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Error! Must input 1, 2, or 3");
-                }
-            }
-
-            Console.WriteLine("Game complete!");
         }
     }
 }
