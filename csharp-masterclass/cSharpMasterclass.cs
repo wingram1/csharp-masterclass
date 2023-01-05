@@ -807,6 +807,19 @@ namespace cSharpMasterclass
 
                 Console.WriteLine(arr);
             }
+
+            // JAGGED ARRAYS CHALLENGE
+
+            string[][] famFriends = new string[][]
+            {
+                new string[] { "Andrew", "Ben", "Will"},
+                new string[] { "Russ", "Pam" },
+                new string[] { "Ming", "Gloria", "Mags", "Mr. Yolts"}
+            };
+
+            Console.WriteLine($"{famFriends[0][1]}, meet {famFriends[1][1]}.");
+            Console.WriteLine($"{famFriends[2][3]}, meet {famFriends[1][0]}.");
+            Console.WriteLine($"{famFriends[1][1]}, meet {famFriends[2][0]}.");
         }
     }
 }
